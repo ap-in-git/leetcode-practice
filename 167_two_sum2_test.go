@@ -23,7 +23,7 @@ func TestTwoSum2(t *testing.T) {
 	}
 
 	for index, data := range testData {
-		if res := twoSum(data.numbers, data.target); !reflect.DeepEqual(res, expectedData[index]) {
+		if res := twoSum2(data.numbers, data.target); !reflect.DeepEqual(res, expectedData[index]) {
 			t.Errorf("expected %v, got %v", expectedData[index], res)
 		}
 	}
@@ -34,5 +34,5 @@ func TestTwoSum2(t *testing.T) {
 		}
 	}()
 
-	twoSum([]int{2, 7, 11, 15}, 90)
+	twoSum2([]int{2, 7, 11, 15}, 90)
 }
